@@ -71,6 +71,24 @@ services:
     depends_on:
       - kafka
 
+  normalization-service:
+    build:
+      context: ../backend/services/normalization-service
+      dockerfile: Dockerfile
+    container_name: normalization-service
+    restart: always
+    ports:
+      - "8002:8002"   # so you can hit its /health from host
+    environment:
+      - KAFKA_BROKER=kafka:9092
+      - NEWS_RAW_TOPIC=news.raw
+      - NEWS_NORMALIZED_TOPIC=news.normalized
+      - MONGO_URL=mongodb://mongo:27017
+      - MONGO_DB_NAME=news_analytics
+      - MONGO_ARTICLES_COLLECTION=articles_normalized
+    depends_on:
+      - kafka
+      - mongo
 
   # ====== Nginx (load balancer / reverse proxy) ======
   nginx:
