@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+
+# Environments
+env/
+venv/
+*.env
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# Node
+node_modules/
+dist/
+build/
+
+# Docker
+*.log
+
+# Local data (if we store Mongo/Kafka volumes)
+infra/data/
