@@ -53,6 +53,8 @@ services:
     environment:
       - KAFKA_BROKER=kafka:9092
       - MONGO_URL=mongodb://mongo:27017
+      - MONGO_DB_NAME=news_analytics
+      - MONGO_ENRICHED_COLLECTION=articles_enriched
     depends_on:
       - kafka
       - mongo
@@ -86,6 +88,25 @@ services:
       - MONGO_URL=mongodb://mongo:27017
       - MONGO_DB_NAME=news_analytics
       - MONGO_ARTICLES_COLLECTION=articles_normalized
+    depends_on:
+      - kafka
+      - mongo
+
+  enrichment-service:
+    build:
+      context: ../backend/services/enrichment-service
+      dockerfile: Dockerfile
+    container_name: enrichment-service
+    restart: always
+    ports:
+      - "8003:8003"
+    environment:
+      - KAFKA_BROKER=kafka:9092
+      - NEWS_NORMALIZED_TOPIC=news.normalized
+      - NEWS_ENRICHED_TOPIC=news.enriched
+      - MONGO_URL=mongodb://mongo:27017
+      - MONGO_DB_NAME=news_analytics
+      - MONGO_ENRICHED_COLLECTION=articles_enriched
     depends_on:
       - kafka
       - mongo
