@@ -31,6 +31,7 @@ services:
       # Single-broker dev setup
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
 
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: "true"
 
   # ====== MongoDB (NoSQL store) ======
   mongo:
@@ -55,6 +56,21 @@ services:
     depends_on:
       - kafka
       - mongo
+
+  ingestion-service:
+    build:
+      context: ../backend/services/ingestion-service
+      dockerfile: Dockerfile
+    container_name: ingestion-service
+    restart: always
+    ports:
+      - "8001:8001"
+    environment:
+      - KAFKA_BROKER=kafka:9092
+      - NEWS_RAW_TOPIC=news.raw
+    depends_on:
+      - kafka
+
 
   # ====== Nginx (load balancer / reverse proxy) ======
   nginx:
