@@ -2,10 +2,27 @@ import os
 from typing import Any, Dict, List, Optional
 
 from fastapi import FastAPI, Query
+from fastapi.middleware.cors import CORSMiddleware
 from motor.motor_asyncio import AsyncIOMotorClient
 from bson import ObjectId
 
+
+
 app = FastAPI(title="News Analytics API Gateway")
+
+# --- CORS ---
+origins = [
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],   # allow GET, POST, etc.
+    allow_headers=["*"],
+)
 
 MONGO_URL = os.getenv("MONGO_URL", "mongodb://mongo:27017")
 MONGO_DB_NAME = os.getenv("MONGO_DB_NAME", "news_analytics")
