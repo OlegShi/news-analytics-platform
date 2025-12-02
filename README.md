@@ -18,8 +18,6 @@ This project demonstrates:
 
 <img width="1498" height="995" alt="image" src="https://github.com/user-attachments/assets/da50a410-78ed-46c3-94c6-3117211fc679" />
 
-<br>
-<br>
 
 🛠 Technologies Used
 Backend
