@@ -18,6 +18,39 @@ This project demonstrates:
 
 <img width="1498" height="995" alt="image" src="https://github.com/user-attachments/assets/da50a410-78ed-46c3-94c6-3117211fc679" />
 
+
+🛠 Technologies Used
+Backend
+
+* FastAPI
+
+* Kafka + aiokafka
+
+* MongoDB
+
+* Python 3.11
+
+* NLP sentiment analysis (rule-based)
+
+Frontend
+
+* React (Vite + TypeScript)
+
+* Material UI v5
+
+* Recharts.js for charting
+
+* Axios
+
+DevOps & Infrastructure
+
+* Docker Compose
+
+* Multi-container architecture
+
+* Hot reload enabled via bind mounts
+
+
 🚀 Features
 🔍 Real-Time News Ingestion
 
