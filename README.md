@@ -53,6 +53,7 @@ DevOps & Infrastructure
 <!-- spacer -->
 
 🚀 Features
+<!-- spacer -->
 🔍 Real-Time News Ingestion
 
 * Pulls live headlines from multiple sources (BBC, CNN, Reuters, The Verge, etc.) using the NewsAPI.
@@ -72,20 +73,6 @@ DevOps & Infrastructure
 * Timestamp normalization.
 
 * Enhanced article objects are pushed to Kafka (news.enriched).
-
-📈 Analytics Engine
-
-Provides:
-
-* Sentiment distribution (positive/neutral/negative)
-
-* Sentiment trend over time (hourly buckets)
-
-* Top keywords (last 24h)
-
-* Fully REST-based API for the frontend dashboard
-
-🖥 Live Dashboard
 
 Built in React + TypeScript + Material UI, featuring:
 
