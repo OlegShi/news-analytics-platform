@@ -114,3 +114,7 @@ Built in React + TypeScript + Material UI, featuring:
 * Docker Compose orchestration
 
 * Modular service boundaries (ingestion, enrichment, analytics, gateway)
+
+
+<img width="1758" height="571" alt="image" src="https://github.com/user-attachments/assets/6fbc8ac4-0366-4a17-9a0c-1d1c6ba111c1" />
+
