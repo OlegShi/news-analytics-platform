@@ -105,6 +105,7 @@ Built in React + TypeScript + Material UI, featuring:
 * Modular service boundaries (ingestion, enrichment, analytics, gateway)
 
 
-<img width="1753" height="559" alt="image" src="https://github.com/user-attachments/assets/72c8ca78-9329-4282-8d02-0e19cd71a13c" />
+<img width="1005" height="800" alt="image" src="https://github.com/user-attachments/assets/4447d4c8-1d2c-4387-bb8b-8bcdceaf824e" />
+
 
 
