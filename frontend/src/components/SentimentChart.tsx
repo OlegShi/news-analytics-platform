@@ -26,21 +26,23 @@ export const SentimentChart: FC<Props> = ({ counts }) => {
   }
 
   return (
-    <ResponsiveContainer width="100%" height={260}>
+    <ResponsiveContainer width="100%" height={200}>
       <PieChart>
         <Pie
           data={data}
           dataKey="value"
           nameKey="name"
-          outerRadius={90}
-          label
+          cx="50%"
+          cy="45%"
+          outerRadius={70}
+          labelLine={false}
         >
           {data.map((entry, index) => (
             <Cell key={entry.name} fill={COLORS[index]} />
           ))}
         </Pie>
         <Tooltip />
-        <Legend />
+        <Legend verticalAlign="bottom" height={24} />
       </PieChart>
     </ResponsiveContainer>
   );
