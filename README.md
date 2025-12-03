@@ -16,7 +16,8 @@ This project demonstrates:
 
 * Scalable container-based deployment with Docker Compose
 
-<img width="1499" height="1054" alt="image" src="https://github.com/user-attachments/assets/921818ba-9c5d-483c-9327-3e63e786c89b" />
+<img width="1005" height="800" alt="image" src="https://github.com/user-attachments/assets/3f32ff91-e34d-4f0c-b456-c8da7c1f1914" />
+
 
 
 🛠 Technologies Used
